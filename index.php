@@ -11,7 +11,7 @@ $directory = getcwd().'/img';
 $path = $directory.'/'.$filename;
 
 if($refresh || !file_exists($path)){
-	exec('/usr/bin/python '.getcwd().'/webkit2png.py -W '.$width.' -H '.$height.' -o '.$name.' -F -D '.$directory.' --delay='.$delay.' '.$url);
+	exec('/usr/bin/python '.getcwd().'/webkit2png.py -W '.$width.' -H '.$height.' -o '.$name.' -F -D '.$directory.' --delay='.$delay.' '.$url.' --transparent');
 }
 
 header('Content-type:image/png');
